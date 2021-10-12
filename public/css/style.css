@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+nav{
+    background-color: #0e77f8;
+    position: sticky;                                     /*we want navbar to stick at top therefore top:0px*/
+    top: 0px;
+    z-index: 6;
+}
+.navbar{
+    list-style: none;                                     /*removes bullets*/
+    display: flex;
+    align-items: center;                                  /*vertically centers the items*/     
+}
+.logo{
+    font-family: 'Bubblegum Sans', cursive;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    margin-left: 9px;
+    margin-right: 50px;
+    font-size: 19px;
+}
+.logo img{
+    height:43px;
+    width:39px;
+    filter: invert();                                     /*inverts the color of logo*/   
+    margin-right: 5px;
+}
+.navbar li{
+    margin:0px 5px;
+}
+.navbar li a{
+    font-family: 'Ubuntu', sans-serif;
+    color:whitesmoke;
+    font-size: 20px;
+    font-weight:700;
+    text-decoration: none;
+    padding:9px 11px;
+    /* letter-spacing: 1px; */                          /*adds space between letters*/
+    /* word-spacing: 1px; */                            /*adds space between words*/
+    /* text-transform: uppercase; */                    /*all alphabets becomes capital*/     
+}
+.navbar li:nth-child(2) a{
+    color:#096ce6;
+    background-color: whitesmoke;
+    border-radius: 9px;
+}
+.navbar li a:hover{
+    color:#096ce6;
+    background-color: whitesmoke;
+    border-radius: 9px;
+}
+
+.container{
+    height:85vh;
+    width: 100%; 
+    background-image: linear-gradient(#3b92fd, rgb(144, 209, 235));
+    position: relative;                                   
+    overflow: hidden;                                      /*we have given width(300%) to tree and road for the 
+    animation purpose therefore they out(i.e. overflow) to hide that we use overflow:hidden also position should be relative */
+}
+.tree{
+    height: 48vh;
+    width: 300%;
+    background-image: url(/images/trees.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    top:288px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    animation: tree 15s linear infinite;
+    
+}
+@keyframes tree{
+    100%{
+        transform: translateX(-1595px);
+    }
+} 
+.road{
+    height: 13vh;
+    width: 300%;
+    background-image: url(/images/road.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    top:494px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+    animation: road 15s linear infinite;
+}
+@keyframes road{
+    100%{
+        transform: translateX(-1595px);
+    }
+}
+.car img{
+    height:200px;
+    width: 430px;
+    position: absolute;
+    top: 312px;
+    left:50px;
+    z-index: 3;
+    animation: car 1s linear infinite;
+}
+@keyframes car{
+    0%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    100%{
+        transform: translateY(-1px);
+    }
+} 
+.fronttyre{
+    height:78px;
+    width:78px;
+    position: absolute;
+    top: 454px;
+    left:378px;
+    z-index: 4;
+    animation: tyre 2s linear infinite;
+}
+.reartyre{
+    height:78px;
+    width:78px;
+    position: absolute;
+    top: 454px;
+    left:106px;
+    z-index: 4;
+    animation: tyre 2s linear infinite;
+}
+@keyframes tyre{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.rent{
+    color:#dcedff;
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    position: absolute;
+    top:85px;
+    left:50%;
+    transform: translateX(-50%);             /* brings element to center */
+}
+.heading{
+    color: whitesmoke;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 85px;
+    position: absolute;
+    top:115px;
+    left:50%;
+    transform: translateX(-50%);
+    text-shadow: 3px 3px 3px black;
+}
+.features::after{
+    color:rgb(253, 253, 114);
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Rubik', sans-serif; */
+    letter-spacing: 2px;
+    position: absolute;
+    top:210px;
+    left:50%;
+    transform: translateX(-50%); 
+    content:"";
+    animation: features 9s linear infinite;
+} 
+@keyframes features{
+    0%{
+        content:"Safe";
+    }
+    20%{
+        content:"Fast";
+    }
+    40%{
+        content:"Comfortable";
+    }
+    60%{
+        content:"Sanitized";
+    }
+    80%{
+        content:"Reliable";
+    }
+    100%{
+        content:"Safe";
+    }
+}
+.carsticker{
+    color:#0469e4;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 23px;
+    position: absolute;
+    top: 423px;
+    left:193px;
+    z-index: 5;
+}
+.work{
+    margin:60px 10px;
+}
+.work h1{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+.work h1 span{
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 30px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+.working{
+    display: flex;
+    justify-content: center;
+    margin:32px 0px;
+}
+.working img{
+    height:82px;
+    width:84px;
+}
+.image{
+    border:8px solid rgb(175, 175, 175);                  /*we have not given border to <img> because we want 
+    add animation to <img>, if we add border to <img> then border will also get animation(it will also rotate)
+    therefore we made a class image and added border to it*/
+    padding:10px 12px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 16px rgb(150, 150, 150);
+}
+.image:hover{
+    border:8px solid rgb(129, 129, 129);
+    cursor: pointer;
+}
+
+.image0 img:hover{
+    animation:movey 2s linear infinite;
+}
+@keyframes movey {
+    0%{
+        transform: translateY(0px);
+    }
+    33%{
+        transform: translateY(-9px);
+    }
+    66%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(9px);
+    }
+}
+
+.image1 img:hover{
+    animation:movex 2s linear infinite;
+}
+@keyframes movex {
+    0%{
+        transform: translateX(0px);
+    }
+    33%{
+        transform: translateX(-9px);
+    }
+    66%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(9px);
+    }
+}
+.image2 img:hover{
+    animation:rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+.book, .pay, .drive, .return{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0px 18px;
+}
+.working h2{
+    margin:5px 0px 10px 0px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+.working p{
+    width:240px;                             /*width is given so that content of <p> gets divided in two lines*/
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+.benefits{
+    margin: 20px 0px 40px 0px;
+    padding:35px 20px 10px 20px;
+    background-color:#d0e5ff;
+}
+.benefits h1{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+}
+.benefits h1 span{
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 30px;
+    letter-spacing: 1px;
+    word-spacing: 1px;  
+}
+.advantages img{
+    height:100px;
+    width:105px;
+}
+.advantages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:20px 15px;
+}
+.advantages p{                             
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+.advantage1, .advantage2, .advantage3, .advantage4, .advantage5, .advantage6{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:15px 13px;
+    background-color: white;
+    height:200px;
+    width:320px;
+    box-shadow: 1px 1px 7px #595cff;
+    padding:7px 5px;
+}
+.advantages h2{
+    font-size: 19px;
+    margin: 7px 0px 10px 0px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+
+.row{
+    height:470px;
+    width:5520px;            /*width is for 6 pages that are overflowing to right*/
+    display:flex;
+    transition: 0.8s;    
+}
+
+/*we can also make use of animation to scroll horizontally but the problem is that with animation added 
+javascript doesn't work also that blue indicator part doesn't work*/
+
+/* #slideshow{
+    transition: 0.7s;
+    animation: slidebar 26s linear infinite;
+}
+@keyframes slidebar {
+    0%{
+        transform:translateX(0px);
+    }
+    15%{
+        transform:translateX(0px) ;
+    }
+    16.6%{
+        transform:translateX(-920px); 
+    }
+    31.6%{
+        transform:translateX(-920px); 
+    }
+    33.2%{
+        transform:translateX(-1840px); 
+    }
+    48.2%{
+        transform:translateX(-1840px);
+    }
+    49.8%{
+        transform:translateX(-2760px);
+    }
+    64.8%{
+        transform:translateX(-2760px);
+    }
+    66.4%{
+        transform:translateX(-3680px);
+    }
+    81.4%{
+        transform:translateX(-3680px);
+    }
+    85%{
+        transform:translateX(-4600px);
+    }
+    100%{
+        transform:translateX(-4600px);
+    }
+    
+}  */
+
+.column{
+    width:920px;            /*width 5520 divided by 6*/
+    height:470px;
+    position: relative;
+    padding: 0px 0px;
+}
+.carimage img{
+    height:280px;
+    width:490px;
+}
+.carimage5 img{
+    height:290px;
+    width:535px;
+}
+
+.ourcar{
+    position: absolute;
+    right:40px;
+    top:50%;
+    transform: translateY(-50%);
+    
+} 
+.ourcar1{
+    position: absolute;
+    left:40px;
+    top:50%;
+    transform: translateY(-50%);
+} 
+.carinfo{
+    height:400px;
+    width:420px;
+    position: absolute;
+    left:20px;
+    top:52%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    text-align: center;
+}
+.carinfo1{
+    height:400px;
+    width:420px;
+    position: absolute;
+    right:20px;
+    top:52%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    text-align: center;
+}
+
+.carinfo h2, .carinfo1 h2{
+    margin-bottom: 24px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 45px;
+}
+.carinfo h3, .carinfo1 h3{
+    margin-bottom: 10px;
+    font-size: 31px;
+    font-family: 'Poppins', sans-serif;
+    color: #0674fa;
+}
+.carinfo h5, .carinfo1 h5{
+    margin-bottom: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    /* letter-spacing: 1px; */
+}
+.hide{
+    display: none;
+}
+.button{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    height: 39px;
+    width:107px;
+    padding:1px 2px;
+    margin:10px 0px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    border: 2px solid black;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: #1d7cf0;
+    color: white;
+
+}
+
+.box{
+    width:920px;            /*width 5520 divided by 6*/
+    height:470px; 
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+.indicators{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -55px; 
+}
+.btn{
+    height:15px;
+    width:45px;
+    border:2px solid #0e77f8;
+    margin:0px 5px;
+    display:inline-block;
+    border-radius: 9px;
+    background-color: white;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #0e77f8;
+}
+.selected{
+    background-color: #0e77f8;
+    width:67px;
+}
+.slider{
+    margin:50px 0px;
+    width:100%;
+    height:630px
+}
+.slider h1{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 39px;
+    margin:15px 0px 15px 0px; 
+}
+.carsforrent{
+    overflow:hidden;
+    border: 8px solid #0e77f8;
+    box-shadow: 0px 0px 12px #5fa7ff;
+}
+
+
+.ourimg1{
+    height:102px;
+    width:210px;
+    margin:3px 0px;
+}
+.ourimg2{
+    height:110px;
+    width:110px;
+}
+.ourimg3{
+    height:110px;
+    width:110px;
+}
+.ourimg4{
+    height:60px;
+    width:230px;
+    margin:22px 0px;
+}
+
+.tray{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.ourquality{
+    margin:30px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ourquality h2{
+    margin:10px 0px;
+    font-family: 'Rubik', sans-serif;
+}
+.ourquality p{
+    margin:4px 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+}
+.ourquality p span{
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 21px;
+}
+.qualities{
+    background-color: gainsboro;
+    margin:15px 0px 30px 0px;
+}
+
+/*for section with class note*/
+.note{
+    width:100%;
+    height: 147px;
+}
+.rules{
+    width:50%;
+    height:70px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin:25px 0px;
+}
+.rules h2{
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Rubik', sans-serif;
+}
+.rules p{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    margin:7px 0px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.cities{
+    height:85px;
+    width:75%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.cities p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin: 0px 6px;
+    height:25px;
+    width:119px;
+    display: flex;
+    align-items: center;
+}
+.cities p i{
+   font-size: 8px;
+   letter-spacing: 1px;
+}
+.presence{
+    margin-top: 10px;
+    margin-left: 30px;
+    width:80%;
+}
+.presence h2{
+    font-size: 23px;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 18px;
+}
+.office h2{
+    font-size: 23px;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 8px;
+}
+.office{
+    margin-top: 10px;
+    height:135px;
+    width:20%;
+}
+.office p{
+    width:210px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.last{
+    display: flex;
+}
+.address{
+    width:100%;
+    height: 150px;
+    margin-top: 25px;
+    background-color: #0e77f8;
+    color:white
+}
+
+.footer{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height:36px;
+    width:100%;
+    background-color: rgb(7, 7, 7);
+    position: relative;
+    bottom: 0px;
+}
+.footer span img{
+    height: 31px;
+    width: 32px;
+    margin:0px 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/booknow.css".css">
+    <title>Book Now</title>
+    <script defer src="/js/index1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+  <nav>
+    <ul class="navbar">
+        <div class="logo"><img src="/images/logo.png" alt="car">WroomCar</div>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/aboutus.html">About us</a></li>
+        <li><a href="/cars.html">Cars</a></li>
+        <li><a href="/booknow.html">Book now</a></li>
+        <li><a href="/contact.html">Contact us</a></li>
+    </ul>
+</nav>
+
+    <div class="booknow">
+        <h1>Book your Car</h1>
+        <form action="/" method="POST" id="bookform" onsubmit="return formvalidate()">
+              <div>
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" required>
+                <span id="nameerror" class="validate"></span>
+              </div>
+              <div>
+                <label for="mobile">Mobile</label>
+                <input type="text" name="mobile" id="mobile" required>
+                <span id="mobileerror" class="validate"></span>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <span id="emailerror" class="validate"></span>
+              </div>
+              <div>
+                <label for="address">Address</label>
+                <textarea name="address" id="address" cols="30" rows="6" placeholder="Detailed address Where the car should be delivered" required></textarea>
+                <span id="addresserror" class="validate"></span>
+              </div>
+              <div>
+                <label for="license">License Number</label>
+                <input type="text" name="license" id="license" placeholder="MH01-12345678910" required>
+                <span id="licenseerror" class="validate"></span>
+              </div>
+              <div>
+                <label for="vehicle">Select Car</label>
+                <select name="vehicle" id="vehicle" required>
+                    <option value="swift">Swift (Hatchback)</option>
+                    <option value="city" class="city">Honda City (Sedan)</option>
+                    <option value="nexon">Tata Nexon (Compact SUV)</option>
+                    <option value="scorpio">Mahindra Scorpio (SUV)</option>
+                    <option value="innova">Innova Crysta (MPV)</option>
+                    <option value="c-class">Mercedes C-Class (Premium Sedan)</option>
+                </select>
+              </div>
+              <div>
+                <label for="datetime">Date&Time(when you need car)</label>
+                <input type="datetime-local" name="datetime" id="datetime" required>
+                <span id="datetimeerror" class="validate"></span>
+              </div>
+              <div>
+                <label for="duration">Duration</label>
+                <input type="number" name="duration" id="duration" placeholder="no.of hours/days/months" required>
+                <span id="durationerror" class="validate"></span>
+                <select name="timespan" id="timespan" required>
+                    <option value="hours">Hour/Hours</option>
+                    <option value="days">Day/Days</option>
+                    <option value="months">Month/Months</option>
+                </select>
+              </div>
+              <div class="click">
+                <span id="btn">Calculate Price</span>
+                
+              </div>
+              <div>
+                <h5>You need to pay <input type="text" name="calculatedprice" id="calculatedprice" readonly> at the time of receiving car</h5>
+              </div>
+              <div class="checkbox">
+                <span><input type="checkbox" name="accept" required>Accept to pay</span>
+              </div>
+              <div class="click">
+                <button class="book" value="submit" type="submit">Book</button>
+              </div>
+        </form>
+    </div>
+
+    <section class="address">
+        <div class="last">
+            <div class="presence">
+                <h2>Our Presence</h2>
+                <div class="cities">
+                    <p><i class="fa fa-circle"></i> Mumbai</p>
+                    <p><i class="fa fa-circle"></i> Pune</p>
+                    <p><i class="fa fa-circle"></i> Delhi</p>
+                    <p><i class="fa fa-circle"></i> Chennai</p>
+                    <p><i class="fa fa-circle"></i> Indore</p>
+                    <p><i class="fa fa-circle"></i> Kolkata</p>
+                    <p><i class="fa fa-circle"></i> Bangalore</p>
+                    <p><i class="fa fa-circle"></i> Hyderabad</p>
+                    <p><i class="fa fa-circle"></i> Ahmedabad</p>
+                    <p><i class="fa fa-circle"></i> Chandigarh</p>
+                    <p><i class="fa fa-circle"></i> Coimbatore</p>
+                    <p><i class="fa fa-circle"></i> Vijayawada</p>
+                </div>
+            </div>
+            <div class="office">
+                <h2>Head Office</h2>
+                <p>1st Floor, Empire Complex, 414, Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra 400099</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="footer">
+        <span><a href="#intagram"><img src="/images/instagram.png" alt="Instagram"></a></span>
+        <span><a href="#facebook"><img src="/images/facebook.png" alt="Facebook"></a></span>
+        <span><a href="#twitter"><img src="/images/twitter.png" alt="Twitter"></a></span>
+        <span><a href="#linkedin"><img src="/images/linkedin.png" alt="linkedIn"></a></span>
+    </section>
+
+
+</body>
+</html>
+
+

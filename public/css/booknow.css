@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+nav{
+    background-color: #0e77f8;
+    position: sticky;                                     
+    top: 0px;
+    z-index: 6;
+}
+.navbar{
+    list-style: none;                                     
+    display: flex;
+    align-items: center;                                     
+}
+.logo{
+    font-family: 'Bubblegum Sans', cursive;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    margin-left: 9px;
+    margin-right: 50px;
+    font-size: 19px;
+}
+.logo img{
+    height:43px;
+    width:39px;
+    filter: invert();                                    
+    margin-right: 5px;
+}
+.navbar li{
+    margin:0px 5px;
+}
+.navbar li a{
+    font-family: 'Ubuntu', sans-serif;
+    color:whitesmoke;
+    font-size: 20px;
+    font-weight:700;
+    text-decoration: none;
+    padding:9px 11px;
+}
+.navbar li a:hover{
+    color:#096ce6;
+    background-color: whitesmoke;
+    border-radius: 9px;
+}
+.navbar li:nth-child(5) a{
+    color:#096ce6;
+    background-color: whitesmoke;
+    border-radius: 9px;
+}
+
+.booknow{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin:40px 0px 55px 0px;
+    width:44%;
+    height:212vh;
+    background-color: rgb(218, 218, 218);
+    border: 2px solid #0e77f8;
+}
+.booknow h1{
+    margin-top: 8px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+form{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height:204vh;
+    width:30vw;
+    /* border: 2px solid green; */
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:25px 0px;
+}
+form input, textarea, select, button, #btn{
+    font-size: 20px;
+    padding: 6px 6px;
+}
+h5{
+    font-size: 22px;
+    text-align: center;
+}
+#btn{
+    width:45%;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(223, 240, 255);
+    border: 2px solid black;
+    text-align: center;
+    margin-bottom: 9px;
+    letter-spacing: 1px;
+}
+#btn:hover{
+    cursor: pointer;
+    background-color: #1d7cf0;
+    color: white;
+}
+#calculatedprice, button{
+    width:41%;
+    background-color: rgb(235, 245, 253);
+    border:none;
+    outline: none;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+}
+.checkbox span{
+    text-align: center;
+}
+.checkbox input{
+    height:20px;
+    width:20px;
+    margin-right: 5px;
+}
+.book{
+    width:50%;
+    border-radius: 5px;
+    background-color: rgb(223, 240, 255);
+    border: 2px solid black;
+}
+.book:hover{
+    cursor: pointer;
+    background-color: #1d7cf0;
+    color: white;
+}
+.click{
+    display: flex;
+    align-items: center;
+}
+.validate{
+    color: red;
+}
+
+.cities{
+    height:85px;
+    width:75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cities p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin: 0px 6px;
+    height:25px;
+    width:119px;
+    display: flex;
+    align-items: center;
+}
+.cities p i{
+   font-size: 8px;
+   letter-spacing: 1px;
+}
+.presence{
+    margin-top: 10px;
+    margin-left: 30px;
+    width:80%;
+}
+.presence h2{
+    font-size: 23px;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+.office h2{
+    font-size: 23px;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+.office{
+    margin-top: 10px;
+    height:135px;
+    width:20%;
+}
+.office p{
+    width:210px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.last{
+    display: flex;
+}
+.address{
+    width:100%;
+    height: 150px;
+    margin-top: 25px;
+    background-color: #0e77f8;
+    color:white;
+}
+
+.footer{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height:36px;
+    width:100%;
+    background-color: rgb(7, 7, 7);
+    position: relative;
+    bottom: 0px;
+}
+.footer span img{
+    height: 31px;
+    width: 32px;
+    margin:0px 15px;
+}

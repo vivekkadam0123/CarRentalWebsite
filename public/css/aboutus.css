@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+nav{
+    background-color: #0e77f8;
+    position: sticky;                                     
+    top: 0px;
+    z-index: 6;
+}
+.navbar{
+    list-style: none;                                     
+    display: flex;
+    align-items: center;                                     
+}
+.logo{
+    font-family: 'Bubblegum Sans', cursive;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    margin-left: 9px;
+    margin-right: 50px;
+    font-size: 19px;
+}
+.logo img{
+    height:43px;
+    width:39px;
+    filter: invert();                                    
+    margin-right: 5px;
+}
+.navbar li{
+    margin:0px 5px;
+}
+.navbar li a{
+    font-family: 'Ubuntu', sans-serif;
+    color:whitesmoke;
+    font-size: 20px;
+    font-weight:700;
+    text-decoration: none;
+    padding:9px 11px;
+}
+.navbar li a:hover{
+    color:#096ce6;
+    background-color: whitesmoke;
+    border-radius: 9px;
+}
+.navbar li:nth-child(3) a{
+    color:#096ce6;
+    background-color: whitesmoke;
+    border-radius: 9px;
+}
+
+
+.about{
+    width:65%;
+    height:100vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.about h2{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Rubik', sans-serif;
+    margin: 42px 0px 16px 0px;
+}
+.about p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    text-align: center;
+}
+.founder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    font-weight: bold;
+    margin:3px 0px;
+    
+}
+span{
+    color: #0674fa; 
+}
+.founder i{
+    font-size: 8px;
+    letter-spacing: 1px;
+ }
+
+ .cities{
+    height:85px;
+    width:75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cities p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin: 0px 6px;
+    height:25px;
+    width:119px;
+    display: flex;
+    align-items: center;
+}
+.cities p i{
+   font-size: 8px;
+   letter-spacing: 1px;
+}
+.presence{
+    margin-top: 10px;
+    margin-left: 30px;
+    width:80%;
+}
+.presence h2{
+    font-size: 23px;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+.office h2{
+    font-size: 23px;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+.office{
+    margin-top: 10px;
+    height:135px;
+    width:20%;
+}
+.office p{
+    width:210px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.last{
+    display: flex;
+}
+.address{
+    width:100%;
+    height: 150px;
+    margin-top: 25px;
+    background-color: #0e77f8;
+    color:white;
+}
+
+.footer{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height:36px;
+    width:100%;
+    background-color: rgb(7, 7, 7);
+    position: relative;
+    bottom: 0px;
+}
+.footer span img{
+    height: 31px;
+    width: 32px;
+    margin:0px 15px;
+}
